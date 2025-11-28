@@ -132,3 +132,4 @@ dhcpcd
 dhclient
 networkmanager
 bash
+python3
