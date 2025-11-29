@@ -18,7 +18,7 @@ int main() {
 	char cmd1[212];
 	sprintf(cmd1, "cp %s %s", file, copyto);
 	char cmd2[212];
-	sprintf(cmd2, "chmod +x %s", file);
+	sprintf(cmd2, "chmod +x %s", copyto);
 	system(cmd1);
 	system(cmd2);
 	printf("Done!\n");
