@@ -5,7 +5,7 @@
 // Clex! (Clone / Make it executable!)
 // This program is basicly chmod +x but with more steps
 // Copyright (C) Rocco Himel
-int main() {
+void cli() {
 	printf("\nClex!");
 	printf("\n=====");
 	char file[101];
@@ -22,5 +22,8 @@ int main() {
 	system(cmd1);
 	system(cmd2);
 	printf("Done!\n");
+}
+int main() {
+	cli();
 	return 0;
 }
