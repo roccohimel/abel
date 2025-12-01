@@ -24,12 +24,26 @@ void comp() {
 	system(compCmd);
 }
 
+void addto(line) {
+	char addtoCmd[1001];
+	sprintf(addtoCmd, "echo '%s' >> %s/csh-repl.c", line, file);
+	system(addtoCmd);
+}
+
 void exe() {
+        addto("}")
 	char exeCmd[61];
-	sprintf(exeCmd, "%s/csh-comp");
-	system(exeCmd);
+        sprintf(exeCmd, "%s/csh-comp", file);
+        system(exeCmd);
 }
 
 int main() {
-	make();
-	
+	printf("Starting csh...");
+	rm();
+	while (1) {
+		make();
+		addto("#include <stdio.h>");
+		addto("#include <stdlib.h>");
+		addto("#include <unistd.h>");
+		addto("#include <string.h>");
+
